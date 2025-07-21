@@ -13,26 +13,31 @@ body {
   position: relative;
 }
 
+/* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
 }
 
+/* Style navigation menu links */
 .topnav a {
   color: white;
-  padding: 10px 10px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   display: block;
+  color: black;
 }
 
+/* Style the hamburger menu */
 .topnav a.icon {
-  background: black;
+  background: #fbffff;
   display: block;
   position: absolute;
   right: 0;
   top: 0;
 }
 
+/* Style the active link (or home/logo) */
 .active {
   background-color: #fbffff;
   color: white;
