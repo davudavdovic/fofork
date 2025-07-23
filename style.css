@@ -11,6 +11,7 @@ body {
   overflow: hidden;
   background-color: #b7f3ed;
   position: relative;
+  overflow: hidden;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
