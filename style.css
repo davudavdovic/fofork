@@ -12,7 +12,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: poppins, sans-serif, futura, sans-serif;
-  background-color: #ffffff;
+  background-color: #f4f4ff;
 }
 
 h1,
@@ -91,6 +91,10 @@ p {
   padding: 10px;
 }
 
+.mySlides > img {
+  border-radius: 10px;
+}
+
 .scrlbar > button {
   font-size: 18px;
   padding: 10px 20px;
@@ -98,9 +102,10 @@ p {
   background: #99d3df;
   border: none;
   border-radius: 5px;
-  color: #16161d;
+  color: #8181a0;
   display: flex;
   align-items: center;
+  border-radius: 100%;
   gap: 8px; /* space between icon and text */
 }
 
@@ -164,15 +169,19 @@ footer {
   background-color: #16161d;
   padding: 10px;
   font-size: 22px;
-  text-align: center;
+  text-align: left;
   color: #b7f3ed;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
+  border-radius: 10px;
+  background-color: #9effdf;
+  margin-top: 7px;
+  box-shadow: 0 0 50px 10px rgb(129, 255, 226);
 }
 
 /* Hide the images by default */
@@ -189,24 +198,28 @@ footer {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: rgb(150, 150, 150);
+  color: rgb(120, 120, 120);
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: #99d3df30;
+  border-radius: 10px;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 10px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.309);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 /* Caption text */
@@ -235,7 +248,7 @@ footer {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #3c756294;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -258,5 +271,17 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+/* Desktop css */
+@media (min-width: 1024px) {
+  .slideshow-container {
+    max-width: 70%;
+    box-shadow: 0 0 50px 10px rgb(85, 150, 124);
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .scrlbar {
+    background-color: #f4f4ff;
   }
 }
