@@ -2,10 +2,12 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: poppins, sans-serif, futura, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: poppins, sans-serif;
 }
 
@@ -19,10 +21,10 @@ p {
 
 .topnav {
   overflow: hidden;
-  background-color: #99D3DF;
+  background-color: #dff1f5;
   position: relative;
   overflow: hidden;
-  
+  box-shadow: 0 0 30px 30px rgb(149, 255, 255);
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -32,7 +34,7 @@ p {
 
 /* Style navigation menu links */
 .topnav a {
-  color: #99D3DF;
+  color: #ffffff;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
@@ -42,7 +44,7 @@ p {
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: #99D3DF;
+  background: hsl(0, 0%, 100%);
   display: block;
   position: absolute;
   right: 0;
@@ -51,17 +53,15 @@ p {
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #99D3DF;
+  background-color: #ffffff;
   color: white;
-  
 }
 
 .products {
-  background-image: url('media/background.jpg'); /* Change to your image path */
+  background-image: url("media/background.jpg"); /* Change to your image path */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #99D3DF;
   padding-top: 60%;
 }
 
@@ -76,7 +76,7 @@ p {
   font-size: 18px;
   padding: 10px 20px;
   cursor: pointer;
-  background: #99D3DF;
+  background: #99d3df;
   border: none;
   border-radius: 5px;
   color: #16161d;
@@ -85,12 +85,14 @@ p {
   gap: 8px; /* space between icon and text */
 }
 
-
 .adread::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgb(153,211,223,0.3); /* Black overlay, 40% opacity */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(153, 211, 223, 0.3); /* Black overlay, 40% opacity */
   backdrop-filter: blur(0.9px); /*Adds a blur effect */
   z-index: 1;
 }
@@ -98,20 +100,19 @@ p {
 .adread > p {
   position: relative;
   z-index: 2; /* Ensures text is above the overlay */
-  color: #99D3DF;
-  text-shadow: #16161d 0px 0px 4px,
-  #99D3DF 0px 0px 3px;
+  color: #99d3df;
+  text-shadow: #16161d 0px 0px 4px, #99d3df 0px 0px 3px;
   font-weight: bold;
   font-size: 30px;
 }
 
 .adread {
   position: relative;
-  background-image: url('media/adread.jpg'); /* Change to your image path */
+  background-image: url("media/adread.jpg"); /* Change to your image path */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #99D3DF;
+  background-color: #99d3df;
   padding-top: 6%;
   padding-bottom: 6%;
   padding-left: 10px;
@@ -136,7 +137,7 @@ p {
 }
 
 hr {
-  border: 3px solid #16161d;;
+  border: 3px solid #16161d;
   border-radius: 6px;
 }
 
@@ -146,5 +147,97 @@ footer {
   font-size: 22px;
   text-align: center;
   color: #b7f3ed;
+}
 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active > .scrlbar,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
