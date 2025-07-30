@@ -325,9 +325,9 @@ footer {
   background-color: #119b8e;
   border-bottom: 10px solid #06524b;
   box-shadow: 0 0 20px 7px #06524aa0;
-  border-top: 2px solid #99d3df;
-  border-left: 2px solid #99d3df;
-  border-right: 2px solid #99d3df;
+  border-top: 1px solid #99d3df;
+  border-left: 1px solid #99d3df;
+  border-right: 1px solid #99d3df;
 }
 .container > i {
   color: #ffffff;
