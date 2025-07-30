@@ -6,38 +6,59 @@ function myFunction() {
     x.style.display = "block";
   }
 }
-let slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+let slideIndex = 1;
+let autoSlideInterval;
+
+showSlides(slideIndex);
+startAutoSlide();
+
+// Automatsko listanje slika na svake 2 sekunde
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    slideIndex++;
+    showSlides(slideIndex);
+  }, 5000);
 }
 
-// Thumbnail image controls
+// Ručno listanje napred/nazad
+function plusSlides(n) {
+  clearInterval(autoSlideInterval); // zaustavi automatsko prebacivanje
+  showSlides((slideIndex += n));
+  startAutoSlide(); // ponovo pokreni automatsko
+}
+
+// Ručno biranje slike klikom na tačkice
 function currentSlide(n) {
+  clearInterval(autoSlideInterval);
   showSlides((slideIndex = n));
+  startAutoSlide();
 }
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
+
   if (n > slides.length) {
     slideIndex = 1;
   }
   if (n < 1) {
     slideIndex = slides.length;
   }
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 4000;
 
