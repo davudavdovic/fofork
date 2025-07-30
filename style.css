@@ -161,6 +161,22 @@ p {
   font-style: bold;
   font-size: 23px;
   color: #16161d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about1 {
+  display: flex;
+  justify-content: center;
+}
+
+.container1 {
+  width: 70%;
+}
+
+.ilustration {
+  width: 30%;
 }
 
 hr {
@@ -361,6 +377,20 @@ span.text {
     height: 26vmin;
     width: 26vmin;
     font-size: 12px;
+  }
+  .about1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ilustration {
+    width: 90%;
+  }
+  .container1 {
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (max-width: 768px) {
