@@ -132,17 +132,13 @@ p {
 
 .adread {
   position: relative;
-  background-image: url("media/adread.jpg"); /* Change to your image path */
+  background-image: url("media/adread.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #99d3df;
-  padding-top: 6%;
-  padding-bottom: 6%;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  padding: 6% 10px;
+  margin: 40px 0 60px 0;
   text-align: left;
 }
 
