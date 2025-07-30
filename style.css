@@ -54,7 +54,7 @@ p {
 /* Style navigation menu links */
 .topnav a {
   color: #ffffff;
-  padding-top: 14px;
+  padding-top: 10px;
   padding-bottom: 14px;
   padding-right: 14px;
   padding-left: 0px;
@@ -70,6 +70,7 @@ p {
   display: block;
   position: absolute;
   margin: 5px;
+  margin-top: 1px;
   margin-left: 0px;
   right: 0;
   top: 0;
@@ -96,7 +97,9 @@ p {
 }
 
 .mySlides > img {
-  border-radius: 10px;
+  display: block;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .scrlbar > button {
@@ -178,7 +181,8 @@ footer {
   max-width: 100%;
   position: relative;
   margin: auto;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   background-color: #16161d;
   margin-top: 7px;
   box-shadow: 0 0 20px 10px #06524b;
