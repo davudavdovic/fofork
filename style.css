@@ -54,7 +54,10 @@ p {
 /* Style navigation menu links */
 .topnav a {
   color: #ffffff;
-  padding: 14px 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 14px;
+  padding-left: 0px;
   text-decoration: none;
   font-size: 25px;
   display: block;
@@ -67,6 +70,7 @@ p {
   display: block;
   position: absolute;
   margin: 5px;
+  margin-left: 0px;
   right: 0;
   top: 0;
 }
@@ -175,9 +179,9 @@ footer {
   position: relative;
   margin: auto;
   border-radius: 10px;
-  background-color: #9effdf;
+  background-color: #16161d;
   margin-top: 7px;
-  box-shadow: 0 0 30px 5px rgb(129, 255, 226);
+  box-shadow: 0 0 20px 10px #06524b;
 }
 
 /* Hide the images by default */
@@ -281,6 +285,10 @@ footer {
   padding: 10px;
   padding-bottom: 30px;
   box-shadow: 0 0 20px 10px #06524b;
+}
+
+.results > p {
+  margin-top: 40px;
 }
 
 .caption {
