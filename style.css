@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:bi,wght@1,700&display=swap');
+
 .Main {
   padding-top: 70px;
 }
@@ -27,6 +29,7 @@ p {
 
 .logo {
   height: 40px;
+  margin-top: 10px;
 }
 
 .logo1 {
@@ -70,8 +73,8 @@ p {
   display: block;
   position: absolute;
   margin: 5px;
-  margin-top: 1px;
-  margin-left: 0px;
+  margin-top: 8px;
+  margin-left: 10px;
   right: 0;
   top: 0;
 }
@@ -131,10 +134,16 @@ p {
 .adread > p {
   position: relative;
   z-index: 2; /* Ensures text is above the overlay */
-  color: #99d3df;
-  text-shadow: #16161d 0px 0px 4px, #99d3df 0px 0px 3px;
+  color: #9b111e;
+  text-shadow: #16161d 0px 0px 4px, white 0px 0px 4px;
   font-weight: bold;
   font-size: 30px;
+}
+
+.adtxtdetail {
+  font-size: 30px;
+  color: white;
+  text-shadow: #16161d 0px 0px 4px, #9b111e 0px 0px 8px;
 }
 
 .adread {
@@ -171,17 +180,26 @@ p {
   justify-content: center;
 }
 
+.abouttext1,
+.abouttext2 {
+  font-size: 20px;
+  color: #9b111e;
+}
+
+.head1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  color: #9b111e;
+  font-weight: 600;
+}
+
 .container1 {
   width: 70%;
 }
 
 .ilustration {
   width: 30%;
-}
-
-hr {
-  border: 3px solid #16161d;
-  border-radius: 6px;
 }
 
 footer {
