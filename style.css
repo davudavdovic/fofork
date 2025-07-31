@@ -52,6 +52,15 @@ p {
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
+  width: 350px;         /* or use max-width: 90% for responsiveness */
+  max-width: 90%;
+  background: #fff;
+  position: fixed;
+  right: 50%;
+  box-shadow: 0 0 20px #888;
+  border-radius: 12px;
+  z-index: 1000;
+  padding: 20px;
 }
 
 /* Style navigation menu links */
