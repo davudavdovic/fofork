@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -188,8 +192,35 @@ footer {
   background-color: #16161d;
   padding: 10px;
   font-size: 22px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   color: #119b8e;
+}
+
+.contact2 {
+  background-color: #16161d;
+  width: 100%;
+  padding: 19px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.contact2 > a {
+  font-size: 40px;
+  color: #9b111e;
+  width: 20%;
+  border-radius: 20px;
+}
+
+.contact2 > a:hover {
+  background-color: #9b111e;
+  color: #ffffff;
+  transition: 1s;
 }
 
 /* Slideshow container */
@@ -354,10 +385,18 @@ footer {
   width: 90%;
   margin: 50px auto 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 30px;
 }
+
+.wrapper1 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
 .container {
   width: 28vmin;
   height: 28vmin;
