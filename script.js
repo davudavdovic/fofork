@@ -61,7 +61,7 @@ function showSlides(n) {
 
 // Brojači
 let valueDisplays = document.querySelectorAll(".num");
-let interval = 4000; // trajanje animacije u ms
+let interval = 10000; // trajanje animacije u ms - SPORIJE
 
 valueDisplays.forEach((valueDisplay) => {
   let startValue = 0;
