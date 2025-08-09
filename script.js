@@ -13,7 +13,7 @@ let autoSlideInterval;
 showSlides(slideIndex);
 startAutoSlide();
 
-// Automatsko listanje slika na svake 2 sekunde
+// Automatsko listanje slika na svake 5 sekundi
 function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     slideIndex++;
@@ -59,24 +59,38 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
+// Brojači
 let valueDisplays = document.querySelectorAll(".num");
-let interval = 4000;
+let interval = 10000; // trajanje animacije u ms - SPORIJE
 
 valueDisplays.forEach((valueDisplay) => {
   let startValue = 0;
   let endValue = parseInt(valueDisplay.getAttribute("data-val"));
   let duration = Math.floor(interval / endValue);
+  let parentContainer = valueDisplay.closest(".container");
+
   let counter = setInterval(function () {
     startValue += 1;
 
-    if (endValue === 100) {
+    if (valueDisplay.classList.contains("views")) {
+      // Za preglede: prikazuje sa "k"
+      valueDisplay.textContent = startValue + "k";
+    } else if (endValue === 100) {
+      // Za procente
       valueDisplay.textContent = startValue + "%";
     } else {
+      // Za obične brojeve
       valueDisplay.textContent = startValue;
     }
 
     if (startValue == endValue) {
       clearInterval(counter);
+
+      // Dodaj flash efekat
+      parentContainer.classList.add("flash");
+      setTimeout(() => {
+        parentContainer.classList.remove("flash");
+      }, 1000);
     }
   }, duration);
 });

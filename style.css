@@ -312,37 +312,14 @@ footer {
   margin-top: 80px;
 }
 
-.results > p {
-  margin-top: 40px;
-}
-
-.caption {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: 650;
-  gap: 10px;
-}
-
-.caption > p {
-  padding-top: 13px;
-}
-
 .wrapper {
   position: relative;
-  width: 90%;
+  width: 80vw;
   margin: 50px auto 0 auto;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  flex-wrap: wrap;
   gap: 30px;
-}
-
-.wrapper1 {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  flex-wrap: nowrap; /* da ostanu u jednom redu */
 }
 
 .container {
@@ -355,13 +332,27 @@ footer {
   position: relative;
   font-size: 16px;
   border-radius: 0.5em;
-  background-color: #119b8e;
-  border-bottom: 10px solid #06524b;
+  background-color: #119b8e; /* tvoja boja */
+  border-bottom: 10px solid #06524b; /* tvoja boja */
   box-shadow: 0 0 20px 7px #06524aa0;
   border-top: 1px solid #99d3df;
   border-left: 1px solid #99d3df;
   border-right: 1px solid #99d3df;
 }
+
+.caption {
+  display: flex;
+  justify-content: center;
+}
+
+.caption > p {
+  padding-top: 13px;
+}
+
+.results > p {
+  margin-top: 40px;
+}
+
 .container > i {
   color: #ffffff;
   font-size: 2.5em;
@@ -382,6 +373,23 @@ span.text {
   font-weight: 400;
   line-height: 0;
 }
+
+@keyframes flash {
+  0% {
+    box-shadow: 0 0 15px rgba(24, 249, 143, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(24, 249, 143, 1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(24, 249, 143, 0.5);
+  }
+}
+
+.flash {
+  animation: flash 1s ease-in-out;
+}
+
 @media screen and (max-width: 1024px) {
   .wrapper {
     width: 85vw;
