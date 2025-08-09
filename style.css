@@ -86,20 +86,6 @@ p {
   color: white;
 }
 
-.products {
-  background-image: url("media/background.jpg"); /* Change to your image path */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.scrllbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
 .mySlides > img {
   display: block;
   border-bottom-left-radius: 10px;
@@ -135,7 +121,7 @@ p {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 78%;
+    padding: 22%;
   }
 }
 
@@ -147,6 +133,28 @@ p {
     background-attachment: fixed;
     background-position: center;
     padding: 17%;
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+  .adplacement {
+    background-image: url("/media/imgmobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top;
+    padding: 58%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .adplacement {
+    background-image: url("/media/imgphone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 146%;
   }
   
 }
@@ -180,7 +188,10 @@ hr {
 }
 
 footer {
-  background-color: #16161d;
+  background-image: url("/media/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
   padding: 50px;
   width: 100%;
