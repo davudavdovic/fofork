@@ -126,9 +126,19 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  padding: 17%;
 }
 
+@media screen and (max-width: 1920px) {
+  .adplacement {
+    background-image: url("/media/imgpc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 17%;
+  }
+  
+}
 
 .about {
   padding: 5%;
