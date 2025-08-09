@@ -120,6 +120,16 @@ p {
   gap: 8px; /* space between icon and text */
 }
 
+.adplacement {
+  background-image: url("/media/imgpc.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 17%;
+}
+
+
 .about {
   padding: 5%;
   font-style: bold;
@@ -278,6 +288,7 @@ footer {
   width: 90%;
   padding: 19px;
   display: flex;
+  object-fit: cover;
   justify-content: space-around;
   gap: 20px;
   border-radius: 30px;
