@@ -120,51 +120,11 @@ p {
   gap: 8px; /* space between icon and text */
 }
 
-.adread::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgb(153, 211, 223, 0.3); /* Black overlay, 40% opacity */
-  backdrop-filter: blur(0.9px); /*Adds a blur effect */
-  z-index: 1;
-}
-
-.adread > p {
-  position: relative;
-  z-index: 2; /* Ensures text is above the overlay */
-  color: #99d3df;
-  text-shadow: #16161d 0px 0px 4px, #99d3df 0px 0px 3px;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.adread {
-  position: relative;
-  background-image: url("media/adread.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #99d3df;
-  padding: 6% 10px;
-  margin: 40px 0 60px 0;
-  text-align: left;
-}
-
-.adtext {
-  text-align: left;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 10px;
-}
-
 .about {
   padding: 5%;
   font-style: bold;
   font-size: 23px;
-  color: #16161d;
+  color: #9b111e;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -190,37 +150,24 @@ hr {
 
 footer {
   background-color: #16161d;
-  padding: 10px;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  color: #119b8e;
-}
-
-.contact2 {
-  background-color: #16161d;
-  width: 100%;
-  padding: 19px;
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  border-radius: 30px;
-  margin-top: 30px;
-}
-
-.contact2 > a {
-  font-size: 40px;
-  color: #9b111e;
-  width: 20%;
-  border-radius: 20px;
-}
-
-.contact2 > a:hover {
-  background-color: #9b111e;
   color: #ffffff;
-  transition: 1s;
+  padding: 50px;
+  width: 100%;
+  padding-bottom: 120px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-footer > a{
+  font-size: 23px;
+  color: #9b111e;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 /* Slideshow container */
@@ -362,6 +309,7 @@ footer {
   padding: 10px;
   padding-bottom: 30px;
   box-shadow: 0 0 20px 10px #06524b;
+  margin-top: 80px;
 }
 
 .wrapper {
