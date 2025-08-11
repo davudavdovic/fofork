@@ -132,7 +132,7 @@ p {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 100vh;
+    padding: 20%;
   }
   
 }
@@ -190,7 +190,7 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 146%;
+    padding-bottom: 142%;
   }
   
 }
