@@ -215,9 +215,20 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 142%;
+    padding-bottom:136%;
+    background-position: center;
   }
+<<<<<<< HEAD
+=======
+  .contact {
+    margin-left: 0px;
+  }
+
+>>>>>>> 3bd05209d77ff9b61dcd419e5b96c3a78f900a65
 }
+
+  
+
 
 .about {
   padding: 5%;
