@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.scroll-offset {
+  scroll-margin-top: 70px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -51,8 +55,17 @@ p {
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
+/* Animacija za otvaranje/zatvaranje burger menija */
+#myLinks {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #b7f3ed;
+  transition: max-height 0.4s ease-out;
+}
+
+#myLinks.show {
+  max-height: 300px; /* prilagodi visinu po potrebi */
+  transition: max-height 0.4s ease-in;
 }
 
 /* Style navigation menu links */
@@ -78,6 +91,22 @@ p {
   margin-left: 0px;
   right: 0;
   top: 0;
+}
+
+#myLinks a {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.2); /* tamnija pozadina */
+  padding: 8px 16px;
+  margin: 4px;
+  border-radius: 10px; /* zaobljene ivice */
+  color: white; /* boja teksta */
+  text-decoration: none; /* bez podvlačenja */
+  transition: background-color 0.3s ease;
+  width: 97%;
+}
+
+#myLinks a:hover {
+  background-color: rgba(0, 0, 0, 0.4); /* još tamnija kad se pređe mišem */
 }
 
 /* Style the active link (or home/logo) */
@@ -134,7 +163,6 @@ p {
     background-position: center;
     padding: 20%;
   }
-  
 }
 
 @media screen and (max-width: 2560px) and (aspect-ratio: 16/10) {
@@ -146,7 +174,6 @@ p {
     background-position: center;
     padding: 20%;
   }
-  
 }
 
 @media screen and (max-width: 3024px) and (aspect-ratio: 16/10) {
@@ -158,7 +185,6 @@ p {
     background-position: center;
     padding: 18%;
   }
-  
 }
 
 @media screen and (max-width: 1920px) {
@@ -170,7 +196,6 @@ p {
     background-position: center;
     padding: 17%;
   }
-  
 }
 
 @media screen and (max-width: 900px) {
@@ -179,7 +204,7 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position:top;
+    background-position: top;
     padding: 58%;
   }
 }
@@ -192,7 +217,6 @@ p {
     background-attachment: fixed;
     padding-bottom: 142%;
   }
-  
 }
 
 .about {
@@ -241,7 +265,7 @@ footer {
   width: 100%;
 }
 
-.contact-footer > a{
+.contact-footer > a {
   font-size: 23px;
   color: #9b111e;
   cursor: pointer;
@@ -398,7 +422,7 @@ footer {
   display: flex;
   justify-content: space-around;
   gap: 30px;
-  flex-wrap: nowrap; /* da ostanu u jednom redu */
+  flex-wrap: nowrap;
 }
 
 .container {
@@ -411,8 +435,8 @@ footer {
   position: relative;
   font-size: 16px;
   border-radius: 0.5em;
-  background-color: #119b8e; /* tvoja boja */
-  border-bottom: 10px solid #06524b; /* tvoja boja */
+  background-color: #119b8e;
+  border-bottom: 10px solid #06524b;
   box-shadow: 0 0 20px 7px #06524aa0;
   border-top: 1px solid #99d3df;
   border-left: 1px solid #99d3df;

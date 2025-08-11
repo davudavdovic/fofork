@@ -1,10 +1,23 @@
-// Otvaranje/zatvaranje menija (ako ga koristiš)
+// Otvaranje/zatvaranje menija sa animacijom (koristi CSS klasu 'show')
 function myFunction() {
-  var x = document.getElementById("myLinks");
+  const x = document.getElementById("myLinks");
   if (x) {
-    x.style.display = x.style.display === "block" ? "none" : "block";
+    x.classList.toggle("show");
   }
 }
+
+// Automatsko zatvaranje menija kada se klikne na link (zatvara se sa animacijom)
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll("#myLinks a");
+  const menu = document.getElementById("myLinks");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      // Ukloni klasu 'show' da se meni zatvori sa animacijom
+      menu.classList.remove("show");
+    });
+  });
+});
 
 // Brojači
 let valueDisplays = document.querySelectorAll(".num");
