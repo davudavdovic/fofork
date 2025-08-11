@@ -215,23 +215,10 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom:136%;
+    padding-bottom: 136%;
     background-position: center;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  .contact {
-    margin-left: 0px;
-  }
-=======
->>>>>>> c6a15304cd95d751240d02f9cfe694b92ba41f6e
-
->>>>>>> 3bd05209d77ff9b61dcd419e5b96c3a78f900a65
 }
-
-  
-
 
 .about {
   padding: 5%;
