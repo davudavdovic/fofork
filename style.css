@@ -201,6 +201,7 @@ p {
 @media screen and (aspect-ratio: 4/3) {
   .adplacement {
     background-image: url("/media/imgphone.png");
+    background-size: fill;
     padding: 0;
     min-height: 700px;
     width: 100vw;
