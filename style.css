@@ -125,7 +125,7 @@ p {
   }
 }
 
-@media screen and (min-width: 2560px) and (aspect-ratio: 16/10) {
+@media screen and (min-width: 2300px) and (aspect-ratio: 16/10) {
   .adplacement {
     background-image: url("/media/imgpc.png");
     background-size: cover;
