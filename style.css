@@ -194,7 +194,7 @@ p {
     background-position: center;
   }
   .contact {
-    align-self: center;
+    margin-left: 0px;
   }
 
 }
