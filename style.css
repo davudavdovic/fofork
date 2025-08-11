@@ -86,20 +86,6 @@ p {
   color: white;
 }
 
-.products {
-  background-image: url("media/background.jpg"); /* Change to your image path */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.scrllbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
 .mySlides > img {
   display: block;
   border-bottom-left-radius: 10px;
@@ -118,6 +104,95 @@ p {
   align-items: center;
   border-radius: 100%;
   gap: 8px; /* space between icon and text */
+}
+
+.adplacement {
+  background-image: url("/media/imgpc.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@media screen and (max-width: 2560px) and (aspect-ratio: 16/9) {
+  .adplacement {
+    background-image: url("/media/imgpc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 22%;
+  }
+}
+
+@media screen and (max-width: 2304px) and (aspect-ratio: 16/10) {
+  .adplacement {
+    background-image: url("/media/imgpc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 20%;
+  }
+  
+}
+
+@media screen and (max-width: 2560px) and (aspect-ratio: 16/10) {
+  .adplacement {
+    background-image: url("/media/imgpc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 20%;
+  }
+  
+}
+
+@media screen and (max-width: 3024px) and (aspect-ratio: 16/10) {
+  .adplacement {
+    background-image: url("/media/imgpc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 18%;
+  }
+  
+}
+
+@media screen and (max-width: 1920px) {
+  .adplacement {
+    background-image: url("/media/imgpc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 17%;
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+  .adplacement {
+    background-image: url("/media/imgmobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top;
+    padding: 58%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .adplacement {
+    background-image: url("/media/imgphone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 142%;
+  }
+  
 }
 
 .about {
@@ -149,7 +224,10 @@ hr {
 }
 
 footer {
-  background-color: #16161d;
+  background-image: url("/media/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
   padding: 50px;
   width: 100%;
@@ -278,6 +356,7 @@ footer {
   width: 90%;
   padding: 19px;
   display: flex;
+  object-fit: cover;
   justify-content: space-around;
   gap: 20px;
   border-radius: 30px;
