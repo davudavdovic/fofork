@@ -1,10 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:bi,wght@1,700&display=swap');
 
 .Main {
   padding-top: 70px;
@@ -29,7 +31,6 @@ p {
 
 .logo {
   height: 40px;
-  margin-top: 10px;
 }
 
 .logo1 {
@@ -52,15 +53,6 @@ p {
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
-  width: 350px;         /* or use max-width: 90% for responsiveness */
-  max-width: 90%;
-  background: #fff;
-  position: fixed;
-  right: 50%;
-  box-shadow: 0 0 20px #888;
-  border-radius: 12px;
-  z-index: 1000;
-  padding: 20px;
 }
 
 /* Style navigation menu links */
@@ -82,8 +74,8 @@ p {
   display: block;
   position: absolute;
   margin: 5px;
-  margin-top: 8px;
-  margin-left: 10px;
+  margin-top: 1px;
+  margin-left: 0px;
   right: 0;
   top: 0;
 }
@@ -92,20 +84,6 @@ p {
 .active {
   background-color: #ffffff;
   color: white;
-}
-
-.products {
-  background-image: url("media/background.jpg"); /* Change to your image path */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.scrllbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
 }
 
 .mySlides > img {
@@ -128,57 +106,70 @@ p {
   gap: 8px; /* space between icon and text */
 }
 
-.adread::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgb(153, 211, 223, 0.3); /* Black overlay, 40% opacity */
-  backdrop-filter: blur(0.9px); /*Adds a blur effect */
-  z-index: 1;
-}
-
-.adread > p {
-  position: relative;
-  z-index: 2; /* Ensures text is above the overlay */
-  color: #9b111e;
-  text-shadow: #16161d 0px 0px 4px, white 0px 0px 4px;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.adtxtdetail {
-  font-size: 30px;
-  color: white;
-  text-shadow: #16161d 0px 0px 4px, #9b111e 0px 0px 8px;
-}
-
-.adread {
-  position: relative;
-  background-image: url("media/adread.jpg");
+.adplacement {
+  background-image: url("/media/imgpc.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
-  background-color: #99d3df;
-  padding: 6% 10px;
-  margin: 40px 0 60px 0;
-  text-align: left;
 }
 
-.adtext {
-  text-align: left;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 10px;
+@media screen and (min-width: 2560px) {
+  .adplacement {
+    background-image: url("/media/imgpc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 22%;
+  }
 }
+
+@media screen and (max-width: 1920px) {
+  .adplacement {
+    background-image: url("/media/imgpc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 17%;
+  }
+  
+}
+
+
+@media screen and (max-width: 900px) {
+  .adplacement {
+    background-image: url("/media/imgmobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    padding: 58%; 
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .adplacement {
+    background-image: url("/media/imgmobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    padding-bottom: 146%;
+    width: 100%;
+  }
+}
+
+  
+
 
 .about {
   padding: 5%;
   font-style: bold;
   font-size: 23px;
-  color: #16161d;
+  color: #9b111e;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -189,20 +180,6 @@ p {
   justify-content: center;
 }
 
-.abouttext1,
-.abouttext2 {
-  font-size: 20px;
-  color: #9b111e;
-}
-
-.head1 {
-  font-family: 'Poppins', sans-serif;
-  font-style: italic;
-  font-size: 40px;
-  color: #9b111e;
-  font-weight: 600;
-}
-
 .container1 {
   width: 70%;
 }
@@ -211,12 +188,34 @@ p {
   width: 30%;
 }
 
+hr {
+  border: 3px solid #16161d;
+  border-radius: 6px;
+}
+
 footer {
-  background-color: #16161d;
-  padding: 10px;
-  font-size: 22px;
-  text-align: left;
-  color: #119b8e;
+  background-image: url("/media/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+  padding: 50px;
+  width: 100%;
+  padding-bottom: 120px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-footer > a{
+  font-size: 23px;
+  color: #9b111e;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 /* Slideshow container */
@@ -327,6 +326,7 @@ footer {
   width: 90%;
   padding: 19px;
   display: flex;
+  object-fit: cover;
   justify-content: space-around;
   gap: 20px;
   border-radius: 30px;
@@ -358,33 +358,19 @@ footer {
   padding: 10px;
   padding-bottom: 30px;
   box-shadow: 0 0 20px 10px #06524b;
-}
-
-.results > p {
-  margin-top: 40px;
-}
-
-.caption {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: 650;
-  gap: 10px;
-}
-
-.caption > p {
-  padding-top: 13px;
+  margin-top: 80px;
 }
 
 .wrapper {
   position: relative;
-  width: 90%;
+  width: 80vw;
   margin: 50px auto 0 auto;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   gap: 30px;
+  flex-wrap: nowrap; /* da ostanu u jednom redu */
 }
+
 .container {
   width: 28vmin;
   height: 28vmin;
@@ -395,13 +381,27 @@ footer {
   position: relative;
   font-size: 16px;
   border-radius: 0.5em;
-  background-color: #119b8e;
-  border-bottom: 10px solid #06524b;
+  background-color: #119b8e; /* tvoja boja */
+  border-bottom: 10px solid #06524b; /* tvoja boja */
   box-shadow: 0 0 20px 7px #06524aa0;
   border-top: 1px solid #99d3df;
   border-left: 1px solid #99d3df;
   border-right: 1px solid #99d3df;
 }
+
+.caption {
+  display: flex;
+  justify-content: center;
+}
+
+.caption > p {
+  padding-top: 13px;
+}
+
+.results > p {
+  margin-top: 40px;
+}
+
 .container > i {
   color: #ffffff;
   font-size: 2.5em;
@@ -422,6 +422,23 @@ span.text {
   font-weight: 400;
   line-height: 0;
 }
+
+@keyframes flash {
+  0% {
+    box-shadow: 0 0 15px rgba(24, 249, 143, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(24, 249, 143, 1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(24, 249, 143, 0.5);
+  }
+}
+
+.flash {
+  animation: flash 1s ease-in-out;
+}
+
 @media screen and (max-width: 1024px) {
   .wrapper {
     width: 85vw;
