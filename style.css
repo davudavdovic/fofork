@@ -198,6 +198,18 @@ p {
   }
 }
 
+@media screen and (aspect-ratio: 4/3) {
+  .adplacement {
+    background-image: url("/media/imgphone.png");
+    padding: 0;
+    min-height: 700px;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}
+
 .about {
   padding: 5%;
   font-style: bold;
