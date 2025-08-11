@@ -181,12 +181,12 @@ p {
 @media screen and (max-width: 900px) {
   .adplacement {
     background-image: url("/media/imgmobile.png");
-    background-position:top;
+    background-position: top;
     padding: 58%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .adplacement {
     background-image: url("/media/imgphone.png");
     padding: 0;
@@ -196,7 +196,6 @@ p {
     box-sizing: border-box;
     overflow-x: hidden;
   }
-
 }
 
 .about {
@@ -245,7 +244,7 @@ footer {
   width: 100%;
 }
 
-.contact-footer > a{
+.contact-footer > a {
   font-size: 32px;
   color: #f5fffe;
   cursor: pointer;
@@ -253,7 +252,6 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
-  
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -270,8 +268,6 @@ footer {
     gap: 10px;
     margin-top: 10px;
   }
-
-  
 }
 
 /* Slideshow container */
