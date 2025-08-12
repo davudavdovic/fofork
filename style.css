@@ -450,11 +450,6 @@ footer {
   box-shadow: none !important;
 }
 
-.products .accordion-header,
-.products .accordion-header.active {
-  font-weight: bold !important;
-}
-
 .accordion-item {
   border-bottom: 1px solid #ccc;
 }
@@ -467,7 +462,7 @@ footer {
 
 .accordion-header {
   cursor: pointer;
-  padding: 10px 0;
+  padding: 10px 40px 10px 0; /* top right bottom left */
   position: relative;
   font-weight: 500;
   color: #9b111e;
@@ -630,5 +625,11 @@ span.text {
   }
   .scrlbar {
     background-color: #f4f4ff;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .products .accordion-header {
+    padding-right: 40px; /* povećaj po potrebi */
   }
 }
