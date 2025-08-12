@@ -209,6 +209,7 @@ p {
     box-sizing: border-box;
     overflow-x: hidden;
     background-attachment: none;
+    position: relative;
   }
 }
 
