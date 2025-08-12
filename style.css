@@ -57,15 +57,19 @@ p {
 /* Hide the links inside the navigation menu (except for logo/home) */
 /* Animacija za otvaranje/zatvaranje burger menija */
 #myLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-height: 0;
   overflow: hidden;
-  background-color: #b7f3ed;
+  background-color: #119b8e;
   transition: max-height 0.4s ease-out;
 }
 
 #myLinks.show {
   max-height: 300px; /* prilagodi visinu po potrebi */
   transition: max-height 0.4s ease-in;
+  padding-bottom: 3px;
 }
 
 /* Style navigation menu links */
@@ -141,10 +145,6 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  width: 100vw;
-  max-width: 100vw;
-  box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 @media screen and (max-width: 2560px) and (aspect-ratio: 16/9) {
@@ -428,10 +428,41 @@ footer {
 }
 
 .products {
+  background-color: #16161d;
+  color: #119b8e;
   padding: 40px;
+  font-size: 23px;
+  box-shadow: 0 0 20px 10px #06524b;
+  margin-top: 20px;
 }
+
+.products h2 {
+  color: #119b8e;
+}
+
+.products .accordion-header,
+.products .accordion-header.active,
+.products .accordion-content,
+.products .accordion-item {
+  background-color: #16161d !important;
+  color: #119b8e !important;
+  border-color: #119b8e !important;
+  box-shadow: none !important;
+}
+
+.products .accordion-header,
+.products .accordion-header.active {
+  font-weight: bold !important;
+}
+
 .accordion-item {
   border-bottom: 1px solid #ccc;
+}
+
+.accordion-header,
+.accordion-header.active {
+  background-color: #f5fffe !important;
+  box-shadow: none !important;
 }
 
 .accordion-header {
