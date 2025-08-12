@@ -427,6 +427,43 @@ footer {
   margin-top: 80px;
 }
 
+.products {
+  padding: 40px;
+}
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-header {
+  cursor: pointer;
+  padding: 10px 0;
+  position: relative;
+  font-weight: 500;
+  color: #9b111e;
+}
+.accordion-header::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+.accordion-header.active::after {
+  content: "—";
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+  transition: max-height 0.3s ease;
+  color: #222;
+}
+.accordion-content.open {
+  max-height: 200px; /* prilagodi po potrebi */
+  padding: 10px 10px 20px 10px;
+}
+
 .wrapper {
   position: relative;
   width: 80vw;

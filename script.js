@@ -54,3 +54,26 @@ valueDisplays.forEach((valueDisplay) => {
     }
   }, duration);
 });
+
+const headers = document.querySelectorAll(".accordion-header");
+headers.forEach((header) => {
+  header.addEventListener("click", () => {
+    const activeHeader = document.querySelector(".accordion-header.active");
+    if (activeHeader && activeHeader !== header) {
+      activeHeader.classList.remove("active");
+      const activeContent = activeHeader.nextElementSibling;
+      activeContent.style.maxHeight = null;
+      activeContent.classList.remove("open");
+    }
+
+    header.classList.toggle("active");
+    const content = header.nextElementSibling;
+    if (header.classList.contains("active")) {
+      content.classList.add("open");
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.classList.remove("open");
+      content.style.maxHeight = null;
+    }
+  });
+});
