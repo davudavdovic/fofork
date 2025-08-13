@@ -184,6 +184,9 @@ p {
     background-position: top;
     padding: 58%;
   }
+  .footer {
+    background-image: url("/media/footerphone.png");
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -195,6 +198,9 @@ p {
     max-width: 100vw;
     box-sizing: border-box;
     overflow-x: hidden;
+  }
+  .footer {
+    background-image: url("/media/footerphone.png");
   }
 }
 
