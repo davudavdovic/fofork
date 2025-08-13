@@ -199,9 +199,6 @@ p {
     box-sizing: border-box;
     overflow-x: hidden;
   }
-  .footer-content {
-    background-image: url("/media/footer.png");
-  }
 }
 
 @media screen and (aspect-ratio: 4/3) {
