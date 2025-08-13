@@ -637,7 +637,10 @@ span.text {
     height: auto;
   }
   .results-content p {
-    margin-left: 50px;
+    font-size: 20px;
+    margin-left: 6%;
+    padding-top: 70px;
+    padding-bottom: 40px;
   }
 }
 
