@@ -184,7 +184,7 @@ p {
     background-position: top;
     padding: 58%;
   }
-  .footer {
+  .footer-content {
     background-image: url("/media/footerphone.png");
   }
 }
@@ -199,7 +199,7 @@ p {
     box-sizing: border-box;
     overflow-x: hidden;
   }
-  .footer {
+  .footer-content {
     background-image: url("/media/footerphone.png");
   }
 }
