@@ -438,7 +438,6 @@ footer {
   color: #119b8e;
   padding: 40px;
   font-size: 23px;
-  box-shadow: 0 0 20px 10px #06524b;
   margin-top: 20px;
 }
 
@@ -639,7 +638,7 @@ span.text {
   .results-content p {
     font-size: 20px;
     margin-left: 6%;
-    padding-top: 66px;
+    padding-top: 33px;
     padding-bottom: 40px;
   }
 }
@@ -664,6 +663,5 @@ span.text {
 
 .results-content p {
   width: 100%;
-  margin-top: 40px;
   text-align: left;
 }
