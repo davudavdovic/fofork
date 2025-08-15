@@ -150,7 +150,6 @@ p {
 @media screen and (max-width: 2560px) and (aspect-ratio: 16/9) {
   .adplacement {
     padding: 22%;
-    background-position: center;
   }
 }
 
