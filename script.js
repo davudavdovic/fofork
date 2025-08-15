@@ -17,63 +17,79 @@ document.addEventListener("DOMContentLoaded", function () {
       menu.classList.remove("show");
     });
   });
-});
 
-// Brojači
-let valueDisplays = document.querySelectorAll(".num");
-let interval = 8000; // trajanje animacije u ms (sporije)
+  // Brojači
+  let valueDisplays = document.querySelectorAll(".num");
+  let interval = 8000; // trajanje animacije u ms (sporije)
 
-valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
-  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-  let duration = Math.floor(interval / endValue);
-  let parentContainer = valueDisplay.closest(".container");
-
-  let counter = setInterval(function () {
-    startValue += 1;
+  valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue);
+    let parentContainer = valueDisplay.closest(".container");
 
     if (valueDisplay.classList.contains("views")) {
-      // Pregledi - dodaje "k"
-      valueDisplay.textContent = startValue + "k";
-    } else if (endValue === 100) {
-      // Procenat
-      valueDisplay.textContent = startValue + "%";
+      // Pregledi - od 0k do 999k, pa 1M
+      let viewsEnd = 999;
+      let viewsDuration = Math.floor(interval / viewsEnd);
+      let counter = setInterval(function () {
+        startValue += 1;
+        if (startValue <= viewsEnd) {
+          valueDisplay.textContent = startValue + "k";
+        }
+        if (startValue === viewsEnd) {
+          clearInterval(counter);
+          setTimeout(() => {
+            valueDisplay.textContent = "1M";
+            parentContainer.classList.add("flash");
+            setTimeout(() => {
+              parentContainer.classList.remove("flash");
+            }, 1000);
+          }, 150); // brži prelaz na 1M
+        }
+      }, viewsDuration);
     } else {
       // Ostali brojevi
-      valueDisplay.textContent = startValue;
+      let counter = setInterval(function () {
+        startValue += 1;
+        if (endValue === 100) {
+          // Procenat
+          valueDisplay.textContent = startValue + "%";
+        } else {
+          valueDisplay.textContent = startValue;
+        }
+        if (startValue === endValue) {
+          clearInterval(counter);
+          parentContainer.classList.add("flash");
+          setTimeout(() => {
+            parentContainer.classList.remove("flash");
+          }, 1000);
+        }
+      }, duration);
     }
+  });
 
-    if (startValue === endValue) {
-      clearInterval(counter);
+  // Accordion
+  const headers = document.querySelectorAll(".accordion-header");
+  headers.forEach((header) => {
+    header.addEventListener("click", () => {
+      const activeHeader = document.querySelector(".accordion-header.active");
+      if (activeHeader && activeHeader !== header) {
+        activeHeader.classList.remove("active");
+        const activeContent = activeHeader.nextElementSibling;
+        activeContent.style.maxHeight = null;
+        activeContent.classList.remove("open");
+      }
 
-      // Flash efekat kada završi
-      parentContainer.classList.add("flash");
-      setTimeout(() => {
-        parentContainer.classList.remove("flash");
-      }, 1000);
-    }
-  }, duration);
-});
-
-const headers = document.querySelectorAll(".accordion-header");
-headers.forEach((header) => {
-  header.addEventListener("click", () => {
-    const activeHeader = document.querySelector(".accordion-header.active");
-    if (activeHeader && activeHeader !== header) {
-      activeHeader.classList.remove("active");
-      const activeContent = activeHeader.nextElementSibling;
-      activeContent.style.maxHeight = null;
-      activeContent.classList.remove("open");
-    }
-
-    header.classList.toggle("active");
-    const content = header.nextElementSibling;
-    if (header.classList.contains("active")) {
-      content.classList.add("open");
-      content.style.maxHeight = content.scrollHeight + "px";
-    } else {
-      content.classList.remove("open");
-      content.style.maxHeight = null;
-    }
+      header.classList.toggle("active");
+      const content = header.nextElementSibling;
+      if (header.classList.contains("active")) {
+        content.classList.add("open");
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.classList.remove("open");
+        content.style.maxHeight = null;
+      }
+    });
   });
 });
