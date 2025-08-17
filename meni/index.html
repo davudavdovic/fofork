@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forten Meni</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../style.css" />
+    <title>Forten Marketing</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.png" />
     <link
       rel="stylesheet"
@@ -20,50 +21,36 @@
       rel="stylesheet"
     />
   </head>
-  <body class="menibody">
+  <body>
     <header class="header"></header>
 
     <div class="main">
       <div class="topnav">
+        <a class="icon" onclick="openNav()"> <i class="fa fa-bars"></i></a>
         <center>
           <a href="#home" class="active">
             <img class="logo" src="../media/forten.png" />
           </a>
         </center>
-        <div id="myLinks">
-          <a href="#onama">O nama</a>
-          <a href="#kontakt">Kontakt</a>
-          <a href="#rezultati">Rezultati</a>
-          <a href="#usluge">Usluge</a>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
       </div>
 
-      <div class="main-section" class="ponude">
-        <h1>Ponude</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni cupiditate, accusamus quasi ullam eius optio nihil autem obcaecati itaque iure velit aspernatur laborum non corporis, quas culpa fugiat mollitia ipsam!
-        </p>
-      </div>
+      <div class="midsection"></div>
 
-      <div class="main-section" class="socialmedia">
-        <h1>Social Media Marketing</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, beatae, voluptate laudantium facere et amet saepe architecto quod ad magnam eligendi vitae aspernatur corrupti sequi voluptatem adipisci obcaecati. Aperiam, nobis?
-        </p>
-      </div>
+      <div class="fillersection"></div>
 
-      <div class="main-section" class="website">
-        <h1>Websajt Kreacija & Dizajn</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt expedita numquam ipsam sed laudantium, aperiam consectetur quidem in, libero eaque cum odio mollitia quisquam asperiores ducimus, atque maxime exercitationem.
-        </p>
-      </div>
+      <div class="additional"></div>
 
-      <div class="sidebar"></div>
-
+      <footer class="footer"></footer>
+    </div>
     <script src="../script.js" defer></script>
   </body>
 </html>
