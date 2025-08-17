@@ -670,3 +670,16 @@ span.text {
   width: 100%;
   text-align: left;
 }
+
+.menibody {
+  background-color: #bebebe71;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-section {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4%;
+  margin-top: 10%;
+  margin-bottom: 15%;
+}
