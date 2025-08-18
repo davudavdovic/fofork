@@ -725,3 +725,10 @@ span.text {
   width: 100%;
   text-align: left;
 }
+
+.midsection {|
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
