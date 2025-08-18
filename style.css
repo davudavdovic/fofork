@@ -81,10 +81,10 @@ p {
 
 .midsection {
   position: absolute;
-  top: 77px; /* visina navbar-a, prilagodi po potrebi */
+  top: 60px; /* visina navbar-a, prilagodi po potrebi */
   left: 0;
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 60px);
   display: flex;
   justify-content: stretch;
   align-items: stretch;
@@ -108,7 +108,7 @@ p {
   padding: 30px;
 }
 
-.midsection .card a button {
+.midsection .card a {
   background-color: transparent;
   font-size: 20px;
   margin-top: 20px;
@@ -117,9 +117,10 @@ p {
   font-weight: 800;
   border-radius: 30px;
   padding: 15px;
+  text-decoration: none;
 }
 
-.midsection .card:nth-child(3) a button {
+.midsection .card:nth-child(3) a {
   color: #222;
   border: 3px solid #222;
 }
@@ -158,6 +159,18 @@ p {
 .midsection .card:nth-child(3):hover {
   background-color: #d4d94f; /* tamnija žuta */
   box-shadow: 0 8px 32px rgba(245, 255, 110, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .midsection {
+    flex-direction: column;
+    height: auto; /* da se visina prilagodi sadržaju */
+  }
+
+  .midsection .card {
+    width: 100%; /* kartica zauzima celu širinu */
+    height: auto; /* automatska visina */
+  }
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -279,7 +292,6 @@ p {
   background-color: #ffffff;
   color: white;
 }
-
 
 .mySlides > img {
   display: block;
