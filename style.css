@@ -53,6 +53,112 @@ p {
   left: 0;
   width: 100%;
 }
+/* css za meni */
+.topnavmeni {
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgb(147, 147, 147);
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.topnavmeni a {
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  padding-right: 14px;
+  padding-left: 0px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  color: rgb(101, 101, 101);
+}
+
+.midsection {
+  position: absolute;
+  top: 77px; /* visina navbar-a, prilagodi po potrebi */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 0;
+  z-index: 2;
+}
+
+.midsection .card {
+  flex: 1 1 33.33%;
+  height: 100%;
+  margin: 0;
+  width: 33.33vw;
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #119b8e;
+  color: #fff;
+  padding: 30px;
+}
+
+.midsection .card a button {
+  background-color: transparent;
+  font-size: 20px;
+  margin-top: 20px;
+  border: 3px solid #fff;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+.midsection .card:nth-child(3) a button {
+  color: #222;
+  border: 3px solid #222;
+}
+
+.midsection .card p {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.midsection .card:nth-child(1) {
+  background-color: #119b8e;
+  color: #fff;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.midsection .card:nth-child(1):hover {
+  background-color: #0e6d63; /* tamnija tirkizna */
+  box-shadow: 0 8px 32px rgba(17, 155, 142, 0.4);
+}
+
+.midsection .card:nth-child(2) {
+  background-color: #9b111e;
+  color: #fff;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.midsection .card:nth-child(2):hover {
+  background-color: #6b0c15; /* tamnija crvena */
+  box-shadow: 0 8px 32px rgba(155, 17, 30, 0.4);
+}
+
+.midsection .card:nth-child(3) {
+  background-color: #f5ff6e;
+  color: #222;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.midsection .card:nth-child(3):hover {
+  background-color: #d4d94f; /* tamnija žuta */
+  box-shadow: 0 8px 32px rgba(245, 255, 110, 0.4);
+}
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 /* Animacija za otvaranje/zatvaranje burger menija */
@@ -724,11 +830,4 @@ span.text {
 .results-content p {
   width: 100%;
   text-align: left;
-}
-
-.midsection {|
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
 }
