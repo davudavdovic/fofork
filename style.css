@@ -850,4 +850,9 @@ span.text {
   margin-top: 10%;
   margin-bottom: 15%;
   font-size: 20px;
+  color: whitesmoke;
+}
+
+.smm-body {
+  background-color: #119b8e;
 }
