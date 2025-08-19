@@ -844,3 +844,10 @@ span.text {
   width: 100%;
   text-align: left;
 }
+
+.wordsection {
+  margin: 5%;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  font-size: 20px;
+}
